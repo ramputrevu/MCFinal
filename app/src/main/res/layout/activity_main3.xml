@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Main3Activity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bluebar5"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:src="@drawable/bluebar" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:src="@drawable/gwit"/>
+
+    <ImageView
+        android:id="@+id/bluebar6"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:src="@drawable/bluebar" />
+
+    <TextView
+        android:id="@+id/LaptoptextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Laptops"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:padding="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"/>
+            <ImageView
+                android:id="@+id/windows"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/dell"/>
+
+            <TextView
+                android:id="@+id/Laptop1textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DELL INSPIRON 15 3542 4TH GEN INTEL CORE I5"
+                android:padding="30dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"/>
+            <ImageView
+                android:id="@+id/mac"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/apple"/>
+            <TextView
+                android:id="@+id/Laptop2textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MacBook Air 13 128GB Intel HD Graphics 5000 RAM: 4GB"
+                android:padding="30dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkoutbutton"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="50dp"
+            android:text="CheckOut"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
