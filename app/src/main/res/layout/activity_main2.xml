@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bluebar3"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:src="@drawable/bluebar" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:src="@drawable/gwit"/>
+
+    <ImageView
+        android:id="@+id/bluebar4"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:src="@drawable/bluebar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/laptops"
+            android:text="Laptops"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cables"
+            android:text="Cables"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashdrives"
+            android:text="flash drives"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adapters"
+            android:text="adapters"/>
+
+    </LinearLayout>
+
+</LinearLayout>
