@@ -1,4 +1,4 @@
-package com.example.mcfinal.;
+package com.example.mcfinal;
 
 import android.app.Activity;
 import android.os.Bundle;
