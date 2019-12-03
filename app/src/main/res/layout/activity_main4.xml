@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bluebar3"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:src="@drawable/bluebar" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:src="@drawable/gwit"/>
+
+    <ImageView
+        android:id="@+id/bluebar4"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:src="@drawable/bluebar" />
+
+
+    <TextView
+        android:id="@+id/checkouttextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout Form"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:padding="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--        <DatePicker-->
+        <!--            android:id="@+id/date_picker"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="160dp" />-->
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="343dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/date_time_set"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Set" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
