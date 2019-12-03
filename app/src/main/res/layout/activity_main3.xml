@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
     <ImageView
         android:id="@+id/bluebar5"
         android:layout_width="match_parent"
@@ -31,20 +34,44 @@
         android:padding="20dp"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/checkBox1"
-                android:layout_width="match_parent"
+            android:orientation="vertical">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/RadioBtnDell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp" />
+
+        <RadioButton
+            android:id="@+id/RadioBtnMac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginTop="50dp"/>
+        </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="15dp"/>
+                android:orientation="horizontal">
             <ImageView
                 android:id="@+id/windows"
                 android:layout_width="80dp"
@@ -58,19 +85,11 @@
                 android:layout_weight="1"
                 android:text="DELL INSPIRON 15 3542 4TH GEN INTEL CORE I5"
                 android:padding="30dp"/>
-
-
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
             <ImageView
                 android:id="@+id/mac"
                 android:layout_width="80dp"
@@ -83,9 +102,9 @@
                 android:layout_weight="1"
                 android:text="MacBook Air 13 128GB Intel HD Graphics 5000 RAM: 4GB"
                 android:padding="30dp"/>
-
+</LinearLayout>
         </LinearLayout>
-
+    </LinearLayout>
         <Button
             android:id="@+id/checkoutbutton"
             android:layout_width="161dp"
@@ -96,6 +115,3 @@
 
 
     </LinearLayout>
-
-
-</LinearLayout>
