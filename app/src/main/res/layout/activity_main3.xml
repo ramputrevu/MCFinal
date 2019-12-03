@@ -46,18 +46,19 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/laptopRadioGroup"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp">
 
         <RadioButton
-            android:id="@+id/RadioBtnDell"
+            android:id="@+id/Dell"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp" />
 
         <RadioButton
-            android:id="@+id/RadioBtnMac"
+            android:id="@+id/Mac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"

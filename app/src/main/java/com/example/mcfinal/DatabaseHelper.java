@@ -12,8 +12,8 @@ import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "it_db3.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "it_db.db";
+    private static final int DATABASE_VERSION = 3;
     private final Context context;
     SQLiteDatabase db;
 
@@ -36,12 +36,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void createDb(){
-        boolean dbExist = checkDbExist();
+//        boolean dbExist = checkDbExist();
 
-        if(!dbExist){
+//        if(!dbExist){
             this.getReadableDatabase();
             copyDatabase();
-        }
+//        }
     }
 
     private boolean checkDbExist(){

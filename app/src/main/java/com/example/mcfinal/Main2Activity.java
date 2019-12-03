@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,7 +25,6 @@ import java.util.ArrayList;
 public class Main2Activity extends Activity {
     DatabaseHelper databaseHelper;
     Spinner spinner;
-    private ArrayAdapter<String> listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,7 @@ public class Main2Activity extends Activity {
                 Bundle extras = getIntent().getExtras();
                 String username, product_type = null;
                 spinner = (Spinner) findViewById(R.id.spinner);
-                spinner.getSelectedItem().toString();
+                product_type = spinner.getSelectedItem().toString();
                 if(extras != null) {
                     username = extras.getString("username");
                     Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
