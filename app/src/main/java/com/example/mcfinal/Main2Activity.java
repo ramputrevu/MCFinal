@@ -25,5 +25,17 @@ public class Main2Activity extends Activity {
             }
 
         });
+
+        Button returns = (Button) findViewById(R.id.returns);
+        returns.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), Main5Activity.class);
+                startActivityForResult(myIntent, 0);
+
+            }
+
+        });
+
     }
 }
+
