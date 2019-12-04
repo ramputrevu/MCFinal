@@ -92,7 +92,7 @@ public class Main5Activity extends AppCompatActivity {
     public void onClickFindProduct(View view){
         if (spinner.getSelectedItem() != null) {
             TextView submit = (TextView) findViewById(R.id.submit_return);
-            String sql_update = "UPDATE equipment_loan SET returned = 1 WHERE loan_id =" + spinner.getSelectedItem();
+            String sql_update = "UPDATE equipment_loan SET returned = 1, return_date= CURRENT_DATE WHERE loan_id =" + spinner.getSelectedItem();
             String sql_update_stock = "UPDATE products SET product_qty = product_qty + 1 WHERE product_id=" + product_id;
             databaseHelper.openDatabase().execSQL(sql_update);
             databaseHelper.openDatabase().execSQL(sql_update_stock);
