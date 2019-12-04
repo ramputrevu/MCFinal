@@ -4,20 +4,19 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/bluebar3"
+        android:id="@+id/bluebar8"
         android:layout_width="match_parent"
         android:layout_height="37dp"
         android:src="@drawable/bluebar" />
 
-
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView9"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:src="@drawable/gwit"/>
 
     <ImageView
-        android:id="@+id/bluebar4"
+        android:id="@+id/bluebar11"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:src="@drawable/bluebar" />
@@ -39,14 +38,24 @@
         android:layout_gravity="center"
         android:text="Product on Loan under User:" />
 
+    <Spinner
+        android:id="@+id/products"
+        android:layout_width="169dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="100px"
+        android:layout_marginBottom="20px"
+        android:entries="@array/product_types"
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/submit_return"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Confirm Return"
-        android:layout_marginTop="40dp"/>
+        android:text="Submit Return"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickFindProduct" />
+
 
 
 </LinearLayout>
