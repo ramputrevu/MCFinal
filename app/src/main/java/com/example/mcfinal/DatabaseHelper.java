@@ -13,7 +13,7 @@ import java.io.OutputStream;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "it_db.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 13;
     private final Context context;
     SQLiteDatabase db;
 
@@ -36,19 +36,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void createDb(){
-//        boolean dbExist = checkDbExist();
+        boolean dbExist = checkDbExist();
 
-//        if(!dbExist){
+        if(!dbExist){
             this.getReadableDatabase();
             copyDatabase();
-//        }
+        }
     }
 
     private boolean checkDbExist(){
         SQLiteDatabase sqLiteDatabase = null;
 
         try{
-            String path = DATABASE_PATH + DATABASE_NAME;
+            String path = DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION;
             sqLiteDatabase = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READONLY);
         } catch (Exception ex){
         }
@@ -65,7 +65,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
             InputStream inputStream = context.getAssets().open(DATABASE_NAME);
 
-            String outFileName = DATABASE_PATH + DATABASE_NAME;
+            String outFileName = DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION;
 
             OutputStream outputStream = new FileOutputStream(outFileName);
 
@@ -86,7 +86,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public SQLiteDatabase openDatabase(){
-        String path = DATABASE_PATH + DATABASE_NAME;
+        String path = DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION;
         db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);
         return db;
     }
