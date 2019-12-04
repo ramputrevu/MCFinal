@@ -25,6 +25,7 @@ import java.util.ArrayList;
 public class Main2Activity extends Activity {
     DatabaseHelper databaseHelper;
     Spinner spinner;
+    String username = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,7 @@ public class Main2Activity extends Activity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Bundle extras = getIntent().getExtras();
-                String username, product_type = null;
+                String product_type = null;
                 spinner = (Spinner) findViewById(R.id.spinner);
                 product_type = spinner.getSelectedItem().toString();
                 if(extras != null) {
@@ -85,8 +86,13 @@ public class Main2Activity extends Activity {
         Button returns = (Button) findViewById(R.id.returns);
         returns.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), Main5Activity.class);
-                startActivityForResult(myIntent, 0);
+                Bundle extras = getIntent().getExtras();
+                if(extras != null) {
+                    username = extras.getString("username");
+                    Intent intent = new Intent(Main2Activity.this, Main5Activity.class);
+                    intent.putExtra("username", username);
+                    startActivity(intent);
+                }
 
             }
 
