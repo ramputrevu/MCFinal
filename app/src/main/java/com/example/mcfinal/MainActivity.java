@@ -1,6 +1,5 @@
 package com.example.mcfinal;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -10,8 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.example.mcfinal.Main2Activity;
-//import com.example.mcfinal.R;
 
 public class MainActivity extends AppCompatActivity {
     EditText edtEmail;
@@ -28,18 +25,23 @@ public class MainActivity extends AppCompatActivity {
         edtPassword = (EditText) findViewById(R.id.loginpassword);
         btnLogin = (Button) findViewById(R.id.signin);
 
+        // Calling database class
         databaseHelper = new DatabaseHelper(MainActivity.this);
 
+        // Login button on click
         btnLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    // check if user exists in Db
                     boolean isExist = databaseHelper.checkUserExist(edtEmail.getText().toString(), edtPassword.getText().toString());
-
+                    // if yes, move to screen 2 and pass on the username
                     if(isExist){
                         Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                         intent.putExtra("username", edtEmail.getText().toString());
                         startActivity(intent);
-                    } else {
+                    }
+                    // If not, show error message
+                    else {
                         edtPassword.setText(null);
                         Toast.makeText(MainActivity.this, "Login failed. Invalid username or password.", Toast.LENGTH_SHORT).show();
                     }

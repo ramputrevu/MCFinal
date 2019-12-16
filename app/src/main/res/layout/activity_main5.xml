@@ -60,5 +60,5 @@
         android:layout_gravity="center"
         android:text="Submit Return"
         android:layout_marginTop="40dp"
-        android:onClick="onClickFindProduct" />
+        android:onClick="onClickReturnProduct" />
 </LinearLayout>

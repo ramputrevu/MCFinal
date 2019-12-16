@@ -12,12 +12,17 @@ import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
+    // set the database name (the Db file should be under assets)
     private static final String DATABASE_NAME = "it_db.db";
+    // set the Db version. To force a Db update, increase the version
     private static final int DATABASE_VERSION = 14;
     private final Context context;
     SQLiteDatabase db;
 
+    // Path to the Db file
     private static final String DATABASE_PATH = "/data/data/com.example.mcfinal/databases/";
+
+    // The name of the users table
     private final String USER_TABLE = "user";
 
 
@@ -36,8 +41,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void createDb(){
+        // check if the Db exists
         boolean dbExist = checkDbExist();
 
+        // if doesn't exist, copy the Db
         if(!dbExist){
             this.getReadableDatabase();
             copyDatabase();
@@ -45,6 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private boolean checkDbExist(){
+        // function to check if the Db exists or not
         SQLiteDatabase sqLiteDatabase = null;
 
         try{
@@ -62,6 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void copyDatabase(){
+        // copy the Db to above path (DATABASE_PATH)
         try {
             InputStream inputStream = context.getAssets().open(DATABASE_NAME);
 
@@ -97,6 +106,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    // a function to check if the user exists in the Db or not
     public boolean checkUserExist(String username, String password){
         String[] columns = {"username"};
         db = openDatabase();
